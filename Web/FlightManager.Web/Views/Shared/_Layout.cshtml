@@ -1,0 +1,93 @@
+﻿@using FlightManager.Common
+@using FlightManager.Data.Models
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@this.ViewData["Title"] - @GlobalConstants.SystemName</title>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700"/>
+    <!-- https://fonts.google.com/specimen/Open+Sans -->
+    <link rel="stylesheet" href="~/css/fontawesome.min.css" />
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="~/css/templatemo-style.css">
+</head>
+<body>
+    
+         <nav class="navbar navbar-expand-xl">
+        <div class="container h-100">
+          <a class="navbar-brand" asp-controller="Home" asp-action="Index"  asp-area="">
+            <h1 class="tm-site-title mb-0">@GlobalConstants.SystemName</h1>
+          </a>
+          <button
+            class="navbar-toggler ml-auto mr-0"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars tm-nav-icon"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto h-100">
+                <li class="nav-item">
+                    <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+              @if (User.IsInRole(Roles.Administrator))
+                {
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span> Employees </span>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" asp-area="@AdministrationArea" asp-controller="Employee" asp-action="All">All</a>
+                            <a class="dropdown-item" asp-area="@AdministrationArea" asp-controller="Employee" asp-action="Create">Create</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="@AdministrationArea" asp-controller="Flight" asp-action="Create">Add Flight</a>
+                    </li>
+                }
+                <partial name="_LoginPartial" />
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @this.RenderBody()
+        </main>
+    </div>
+
+    <footer class="tm-footer row tm-mt-small">
+      <div class="col-12 font-weight-light">
+        <p class="text-center text-white mb-0 px-4 small">
+          @DateTime.Now.Year - @GlobalConstants.SystemName - All rights reserved. 
+        </p>
+      </div>
+    </footer>
+    
+    <script src="~/lib/js/jquery-3.3.1.min.js"></script>
+    <!-- https://jquery.com/download/ -->
+    <script src="~/lib/js/bootstrap.min.js"></script>
+    <!-- https://getbootstrap.com/ -->
+
+    @await this.RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

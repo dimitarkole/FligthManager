@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>..\..\Rules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\VS 2019\FlightManager\Services\FlightManager.Services.Data\FlightManager.Services.Data.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.205" PrivateAssets="all">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\FlightManager.Data.Common\FlightManager.Data.Common.csproj" />
+    <ProjectReference Include="..\..\Data\FlightManager.Data.Models\FlightManager.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Data\FlightManager.Data\FlightManager.Data.csproj" />
+    <ProjectReference Include="..\..\Web\FlightManager.Web.ViewModels\FlightManager.Web.ViewModels.csproj" />
+    <ProjectReference Include="..\FlightManager.Services.Mapping\FlightManager.Services.Mapping.csproj" />
+    <ProjectReference Include="..\FlightManager.Services\FlightManager.Services.csproj" />
+  </ItemGroup>
+
+</Project>

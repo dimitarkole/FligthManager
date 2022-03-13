@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FlightManager.Common</name>
+    </assembly>
+    <members>
+        <member name="T:FlightManager.Common.GlobalConstants">
+            <summary>
+            This class contains the all of the global constants that the project uses.
+            </summary>
+        </member>
+    </members>
+</doc>

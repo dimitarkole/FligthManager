@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FlightManager.Services.Data.Tests</name>
+    </assembly>
+    <members>
+        <member name="T:FlightManager.Services.Data.Tests.FligthServiceTests">
+            <summary>
+            This class is responsible for testing the Flight logic that the system contains.
+            </summary>
+        </member>
+        <member name="T:FlightManager.Services.Data.Tests.ReservationServiceTests">
+            <summary>
+            This class is responsible for testing the Reservation logic that the system contains.
+            </summary>
+        </member>
+    </members>
+</doc>

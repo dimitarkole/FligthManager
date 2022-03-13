@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FlightManager.Services.Data</name>
+    </assembly>
+    <members>
+        <member name="T:FlightManager.Services.Data.FlightService">
+            <summary>
+            This class does all of the logic behind the Flights.
+            </summary>
+        </member>
+        <member name="T:FlightManager.Services.Data.ReservationService">
+            <summary>
+            This class does all of the logic behind the Reservations.
+            </summary>
+        </member>
+    </members>
+</doc>

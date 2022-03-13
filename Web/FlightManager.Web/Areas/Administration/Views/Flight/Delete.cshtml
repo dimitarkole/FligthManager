@@ -1,0 +1,59 @@
+﻿@model FlightDetailsViewModel
+@{
+    ViewData["Title"] = "Delete flight";
+}
+
+<h1 class="text-white">@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-12">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-warning"></div>
+            <div class="d-flex justify-content-between">
+                <div class="form-group w-50 mr-2">
+                    <label asp-for="Origin"></label>
+                    <label class="form-control">@Model.Origin</label>
+                </div>
+                <div class="form-group w-50 ml-2">
+                    <label asp-for="Destination"></label>
+                    <label class="form-control">@Model.Destination</label>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class="form-group w-50 mr-2">
+                    <label asp-for="TakeOffTime"></label>
+                    <label class="form-control">@Model.TakeOffTime</label>
+                </div>
+                <div class="form-group w-50 ml-2">
+                    <label asp-for="Duration"></label>
+                    <label class="form-control">@Model.Duration</label>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class="form-group w-25">
+                    <label asp-for="PlaneType"></label>
+                    <label class="form-control">@Model.PlaneType</label>
+                </div>
+                <div class="form-group w-25">
+                    <label asp-for="PlaneNumber"></label>
+                    <label class="form-control">@Model.PlaneNumber</label>
+                </div>
+                <div class="form-group w-25">
+                    <label asp-for="PilotName"></label>
+                    <label class="form-control">@Model.PilotName</label>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class="form-group w-50 mr-2">
+                    <label asp-for="AvailableEconomy"></label>
+                    <label class="form-control">@Model.AvailableEconomy</label>
+                </div>
+                <div class="form-group w-50 ml-2">
+                    <label asp-for="AvailableBussines"></label>
+                    <label class="form-control">@Model.AvailableBussines</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Delete</button>
+        </form>
+    </div>
+</div>

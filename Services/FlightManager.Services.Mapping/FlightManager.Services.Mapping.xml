@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FlightManager.Services.Mapping</name>
+    </assembly>
+    <members>
+        <member name="T:FlightManager.Services.Mapping.AutoMapperConfig">
+            <summary>
+            This class configures the Auto Mapper that lets the system use better data controls.
+            </summary>
+        </member>
+    </members>
+</doc>

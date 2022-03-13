@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FlightManager.Tests.Data</name>
+    </assembly>
+    <members>
+        <member name="T:FlightManager.Tests.Data.FlightTestsData">
+            <summary>
+            This class has all of the testing data used to test Flight logic.
+            </summary>
+        </member>
+        <member name="T:FlightManager.Tests.Data.ReservationTestsData">
+            <summary>
+            This class has all of the testing data used to test Reservation logic.
+            </summary>
+        </member>
+    </members>
+</doc>

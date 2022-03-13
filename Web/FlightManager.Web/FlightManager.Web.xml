@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FlightManager.Web</name>
+    </assembly>
+    <members>
+        <member name="T:FlightManager.Web.Controllers.FlightController">
+            <summary>
+            This class controls the Views releated to Flight.
+            </summary>
+        </member>
+        <member name="M:FlightManager.Web.Controllers.FlightController.All(System.Int32,System.Int32)">
+            <summary>
+            This method calls the "All Flights" View.
+            </summary>
+        </member>
+        <member name="M:FlightManager.Web.Controllers.FlightController.Details(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            This method calls the "Details of certain Flight" View.
+            </summary>
+        </member>
+        <member name="T:FlightManager.Web.Controllers.HomeController">
+            <summary>
+            This class controls the Views releated to Homepage.
+            </summary>
+        </member>
+        <member name="M:FlightManager.Web.Controllers.HomeController.Index(System.Int32,System.Int32)">
+            <summary>
+            This method calls the View that displays the Homepage.
+            </summary>
+        </member>
+        <member name="M:FlightManager.Web.Controllers.HomeController.Privacy">
+            <summary>
+            This method calls the Privacy View that displays the Privacy settings.
+            </summary>
+        </member>
+        <member name="M:FlightManager.Web.Controllers.HomeController.Error">
+            <summary>
+            This method calls the Error View that displays the Error in detail if it encounters any.
+            </summary>
+        </member>
+        <member name="T:FlightManager.Web.Controllers.ReservationController">
+            <summary>
+            This class controls the Views the Views releated to TicketReservation
+            </summary>
+        </member>
+        <member name="M:FlightManager.Web.Controllers.ReservationController.Create(FlightManager.Web.ViewModels.ReservationModels.ReservationCreateInputModel)">
+            <summary>
+            This method calls the Create View which displays the page that lets you create a reservation.
+            </summary>
+        </member>
+        <member name="M:FlightManager.Web.Controllers.ReservationController.Details(System.Int32)">
+            <summary>
+            This method calls the Details View that lets you see the details of your reservation.
+            </summary>
+        </member>
+        <member name="M:FlightManager.Web.Controllers.ReservationController.SendConfirmationEmailsToPassengers(System.Collections.Generic.IEnumerable{FlightManager.Web.ViewModels.ReservationModels.ReservationPassangerInputModel},FlightManager.ViewModels.FlightModels.FlightViewModel)">
+            <summary>
+            This method calls the send email function and sends a confirmation email to the Passenger.
+            </summary>
+        </member>
+        <member name="M:FlightManager.Web.Controllers.ReservationController.SendEmailToClient(System.String,FlightManager.ViewModels.FlightModels.FlightViewModel,System.Collections.Generic.IEnumerable{FlightManager.Web.ViewModels.ReservationModels.ReservationPassangerInputModel})">
+            <summary>
+            This method calls the send email function and sends a confirmation email to the Client.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FlightManager.Services.Messaging</name>
+    </assembly>
+    <members>
+        <member name="T:FlightManager.Services.Messaging.IEmailSender">
+            <summary>
+            This class calls the email sender method that has the contents of the email.
+            </summary>
+        </member>
+        <member name="T:FlightManager.Services.Messaging.SendGridEmailSender">
+            <summary>
+            This class creates an email and sends it to the desired person/organization.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FlightManager.Services</name>
+    </assembly>
+    <members>
+        <member name="T:FlightManager.Services.PaginationService">
+            <summary>
+            This class calculates how many items are displayed per page.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,50 @@
+﻿@model EmployeeDetailsViewModel
+@{
+    ViewData["Title"] = "Employee details";
+}
+
+<h1 class="text-white">@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-4">
+            <div class="row form-group">
+                <label asp-for="Username"></label>
+                <label class="form-control">@Model.Username</label>
+            </div>
+           
+            <div class="row form-group">
+                <label asp-for="Name"></label>
+                <label class="form-control">@Model.Name</label>
+            </div>
+            
+            <div class="row form-group">
+                <label asp-for="PersonalNumber"></label>
+                <label class="form-control">@Model.PersonalNumber</label>
+            </div>
+           
+            <div class="row form-group">
+                <label asp-for="PhoneNumber"></label>
+                <label class="form-control">@Model.PhoneNumber</label>
+            </div>
+    </div>
+    <div class="col-md-2">
+    </div>
+
+    <div class="col-md-4">
+         <div class="row form-group">
+            <label asp-for="Email"></label>
+                <label class="form-control">@Model.Email</label>
+        </div>
+        <div class="row form-group">
+            <label asp-for="Surname"></label>
+                <label class="form-control">@Model.Surname</label>
+        </div>
+         <div class="row form-group">
+            <label asp-for="Address"></label>
+            <label class="form-control">@Model.Address</label>
+        </div>
+    </div>
+
+</div>

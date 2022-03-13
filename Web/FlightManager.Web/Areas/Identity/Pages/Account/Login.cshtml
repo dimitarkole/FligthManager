@@ -1,0 +1,59 @@
+﻿@page
+@using FlightManager.Common
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+ <div class="container tm-mt-big tm-mb-big">
+    <div class="row">
+        <div class="col-12 mx-auto tm-login-col">
+            <div class="tm-bg-primary-dark tm-block tm-block-h-auto">
+            <div class="row">
+                <div class="col-12 text-center">
+                <h2 class="tm-block-title mb-4">Welcome to @GlobalConstants.SystemName, Login</h2>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-12">
+                      <form id="account" method="post">
+                        <hr />
+                        <div asp-validation-summary="All" class="text-warning"></div>
+                        <div class="form-group">
+                            <label asp-for="Input.UserName"></label>
+                            <input asp-for="Input.UserName" class="form-control" />
+                            <span asp-validation-for="Input.UserName" class="text-warning"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Input.Password"></label>
+                            <input asp-for="Input.Password" class="form-control" />
+                            <span asp-validation-for="Input.Password" class="text-warning"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label asp-for="Input.RememberMe">
+                                    <input asp-for="Input.RememberMe" />
+                                    @Html.DisplayNameFor(m => m.Input.RememberMe)
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group mt-4">
+                        <button type="submit" class="btn btn-primary btn-block text-uppercase">
+                            Log in
+                        </button>
+                        </div>
+                        @*<div class="mt-5 btn btn-primary btn-block text-uppercase">
+                             <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="color-white">Register as a new user</a>
+                        </div>*@
+                    </form>
+                </div>
+            </div>
+        </div>
+     </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
